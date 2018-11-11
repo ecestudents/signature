@@ -49,7 +49,7 @@
     "clean": "rimraf .cache public lambda-public",
     "build:gatsby": "node_modules/.bin/gatsby build",
     "build:lambda": "node_modules/.bin/netlify-lambda -c ./webpack.functions.js build src/lambda",
-    "build": "npm run clean && npm run build:gatsby && npm run build:lambda",
+    "build": "npm run clean && npm run build:gatsby",
     "gatsby": "node_modules/.bin/gatsby develop --port 8080",
     "lambda": "node_modules/.bin/netlify-lambda -c ./webpack.functions.js serve src/lambda --port 8081",
     "dev": "npm run gatsby",
