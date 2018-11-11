@@ -6,7 +6,7 @@ import Footer from "./footer";
 import "reset-css";
 import "./layout.scss";
 
-//import favicon from "../img/favicon.png";
+import favicon from "../../img/favicon.png";
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -14,7 +14,7 @@ const TemplateWrapper = ({ children }) => (
     <main>
       <Helmet
         title="Home | ECE Students"
-        //link={[{ rel: "shortcut icon", type: "image/png", href: `${favicon}` }]}
+        link={[{ rel: "shortcut icon", type: "image/png", href: `${favicon}` }]}
       />
       {children}
     </main>
