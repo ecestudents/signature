@@ -75,7 +75,8 @@ if (process.env.C9_PID) exports.onCreateWebpackConfig = ({ stage, getConfig, act
     })
     config.plugins.push(new PrettierPlugin())
   }
-
+  
+  //config.resolve
   config.output.publicPath = "/"
   actions.replaceWebpackConfig(config)
 }

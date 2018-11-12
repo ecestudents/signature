@@ -2,15 +2,25 @@ import React from "react";
 import Helmet from "react-helmet";
 import Header from "./header";
 import Footer from "./footer";
-
-//import "reset-css";
+import styled from "styled-components";
 import "./layout.scss";
-
 import favicon from "../../img/favicon.png";
 
+const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+  }
+`;
+
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Header />
+  <Layout>
+    <div>
+      <Header />
+    </div>
     <main>
       <Helmet
         title="Home | ECE Students"
@@ -18,8 +28,10 @@ const TemplateWrapper = ({ children }) => (
       />
       {children}
     </main>
-    <Footer />
-  </div>
+    <div>
+      <Footer />
+    </div>
+  </Layout>
 );
 
 export default TemplateWrapper;

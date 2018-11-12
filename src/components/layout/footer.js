@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Wrapper } from "../styles";
+//import { Wrapper } from "components/styles";
 
 class Footer extends React.Component {
   render() {
-    return "";
+    return "this is in a wrapper";
   }
 }
 
