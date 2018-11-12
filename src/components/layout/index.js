@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import Header from "./header";
 import Footer from "./footer";
 
-import "reset-css";
+//import "reset-css";
 import "./layout.scss";
 
 import favicon from "../../img/favicon.png";
