@@ -16,20 +16,21 @@ const Layout = styled.div`
   }
 `;
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = props => (
   <Layout>
     <div>
-      <Header />
+      <Header gradient={props.gradient} />
     </div>
     <main>
       <Helmet
         title="Home | ECE Students"
         link={[{ rel: "shortcut icon", type: "image/png", href: `${favicon}` }]}
       />
-      {children}
+
+      {props.children}
     </main>
     <div>
-      <Footer />
+      <Footer gradient={props.gradient} />
     </div>
   </Layout>
 );

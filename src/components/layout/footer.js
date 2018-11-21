@@ -4,13 +4,17 @@ import styled from "styled-components";
 
 const Container = styled.div`
   color: white;
-  ${Gradient()}
+  ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
 `;
 
 class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
-      <Container>
+      <Container gradient={this.props.gradient}>
         <Wrapper>
           <div>
             This is the inner wrapper

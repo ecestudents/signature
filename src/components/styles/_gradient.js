@@ -7,6 +7,10 @@ const Gradient = (color = "#e55625") => {
   start.hue += 12;
   start.saturation *= 1.25;
   start.lightness += 0.02;
+
+  end.hue += 1;
+  end.saturation *= 1.01;
+
   //console.log(start);
 
   /*
