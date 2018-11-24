@@ -26,23 +26,44 @@ const Content = styled.div`
   }
 `;
 
-const icons = [faFacebookSquare, faLinkedin, faInstagram];
+class Social extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { facebook: "", linkedin: "", instagram: "" };
+  }
 
-const Social = () => (
-  <div>
-    <h3>Stay Updated</h3>
-    <Content>
-      {icons.map(i => (
-        <div className="icon">
-          <FontAwesomeIcon icon={i} />
-        </div>
-      ))}
+  componentDidMount() {
+    fetch(
+      "https://graph.facebook.com/ECEStudents?fields=fan_count&access_token=EAAD5RBXdTP0BAHQthvjIhZAVXiHWABiGOzqF1JYbu4UjY3eZACcTcO2VSfNn75O1M2L2lMTaGqATzhNZArZCryM4fLKG1y204DDVxfxCbuVqf3bAoAiC9E3ivvKWDwZCkK6DjZCLKHAaxoPwmtgTB6b596HMnfkDgk6R7AAvp6YCHRv8FTbuMfzP45XdvvMu6r19lMWriUegZDZD"
+    )
+      .then(res => res.json())
+      .then(res => this.setState({ facebook: res.fan_count }));
+  }
 
-      <div className="count">4212</div>
-      <div className="count">487</div>
-      <div className="count">705</div>
-    </Content>
-  </div>
-);
+  render() {
+    return (
+      <div>
+        <h3>Stay Updated</h3>
+        <Content>
+          <div className="icon">
+            <FontAwesomeIcon icon={faFacebookSquare} />
+          </div>
+
+          <div className="icon">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </div>
+
+          <div className="icon">
+            <FontAwesomeIcon icon={faInstagram} />
+          </div>
+
+          <div className="count">{this.state.facebook}</div>
+          <div className="count">{this.state.linkedin}</div>
+          <div className="count">{this.state.instagram}</div>
+        </Content>
+      </div>
+    );
+  }
+}
 
 export default Social;
