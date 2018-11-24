@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, media, ms } from "./index";
+import { styled, media, ms } from "styles";
 
 const Breakpoints = styled.div`
   margin-right: auto;
@@ -21,7 +21,4 @@ ${media.greaterThan("large")`
 
 `;
 
-console.log(ms);
-const Wrapper = ({ children }) => <Breakpoints>{children}</Breakpoints>;
-
-export default Wrapper;
+export default Breakpoints;

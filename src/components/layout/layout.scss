@@ -94,7 +94,7 @@ html {
 }
 
 body {
-  color: #303030k;
+  color: #303030;
   font-family: Aleo;
 }
 h1,
@@ -108,11 +108,13 @@ h6 {
 
 a {
   color: white;
-  main {
-    color: #4887c7;
-  }
+
   text-decoration: none;
   /* no underline */
+}
+
+main a {
+  color: #4887c7;
 }
 
 ::selection {

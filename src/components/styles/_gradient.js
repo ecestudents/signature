@@ -1,6 +1,7 @@
 import { parseToHsl, hsl } from "polished";
+import { colors } from "styles";
 
-const Gradient = (color = "#e55625") => {
+const Gradient = (color = colors.orange) => {
   let start = parseToHsl(color);
   let end = parseToHsl(color);
 
