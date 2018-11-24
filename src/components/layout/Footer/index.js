@@ -1,10 +1,11 @@
 import React from "react";
-import { Wrapper, Gradient, media, styled, ms } from "../../styles";
+import { Wrapper, Gradient, media, styled, ms, colors } from "styles";
 import Address from "./address";
 import Contact from "./contact";
 import Social from "./social";
 
 const Container = styled.div`
+  box-shadow: 0 0 3px 0 ${colors.black};
   color: white;
   ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
 `;
@@ -14,6 +15,7 @@ const Grid = styled.div`
   justify-content: space-between;
   text-align: center;
   flex-direction: column;
+  padding: ${ms(1)} 0;
   ${media.greaterThan("medium")`
         flex-direction: row;
     `}

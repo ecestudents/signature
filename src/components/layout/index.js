@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import Header from "./header";
 import Footer from "./Footer";
-import styled from "styled-components";
+import { styled, ms } from "styles";
 import "./layout.scss";
 import favicon from "../../img/favicon.png";
 
@@ -13,6 +13,7 @@ const Layout = styled.div`
 
   main {
     flex: 1;
+    margin: ${ms(1.5)} 0;
   }
 `;
 
