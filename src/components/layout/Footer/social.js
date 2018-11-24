@@ -1,45 +1,46 @@
 import React from "react";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebookSquare,
+  faLinkedin,
+  faInstagram
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled, ms, media } from "../../styles";
 
 const Content = styled.div`
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-auto-flow: row;
-  grid-column-gap: ${ms(-1)};
+  grid-column-gap: ${ms(0)};
   align-items: center;
   margin-top: 5px;
+  text-align: center;
 
   .icon {
-    font-size: ${ms(1.5)};
-    text-align: center;
+    font-size: ${ms(2.5)};
   }
 
-  .text {
-    text-align: left;
+  .count {
+    font-size: ${ms(1)};
   }
-
-  ${media.greaterThan("large")`
-    grid-template-columns: 1fr auto;
-  `};
 `;
+
+const icons = [faFacebookSquare, faLinkedin, faInstagram];
 
 const Social = () => (
   <div>
-    <h3>Visiting Address</h3>
+    <h3>Stay Updated</h3>
     <Content>
-      <div className="icon">
-        <FontAwesomeIcon icon={faMapMarkerAlt} />
-      </div>
+      {icons.map(i => (
+        <div className="icon">
+          <FontAwesomeIcon icon={i} />
+        </div>
+      ))}
 
-      <div className="text">
-        Burgemeester Oudlaan 50
-        <br />
-        Office H7-27
-        <br />
-        3062 PA | Rotterdam
-      </div>
+      <div className="count">4212</div>
+      <div className="count">487</div>
+      <div className="count">705</div>
     </Content>
   </div>
 );
