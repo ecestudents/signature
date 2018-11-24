@@ -19,6 +19,7 @@ const Content = styled.div`
 
   .icon {
     font-size: ${ms(2.5)};
+    color: white;
   }
 
   .count {
@@ -29,7 +30,7 @@ const Content = styled.div`
 class Social extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { facebook: "", linkedin: "", instagram: "" };
+    this.state = { facebook: "", linkedin: "540", instagram: "769" };
   }
 
   componentDidMount() {
@@ -45,17 +46,29 @@ class Social extends React.Component {
       <div>
         <h3>Stay Updated</h3>
         <Content>
-          <div className="icon">
+          <a
+            className="icon"
+            href="https://www.facebook.com/ECEStudents"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faFacebookSquare} />
-          </div>
+          </a>
 
-          <div className="icon">
+          <a
+            className="icon"
+            href="https://www.linkedin.com/company/ecestudents/"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
-          </div>
+          </a>
 
-          <div className="icon">
+          <a
+            className="icon"
+            href="https://www.instagram.com/ecestudents/"
+            target="_blank"
+          >
             <FontAwesomeIcon icon={faInstagram} />
-          </div>
+          </a>
 
           <div className="count">{this.state.facebook}</div>
           <div className="count">{this.state.linkedin}</div>
