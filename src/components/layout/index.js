@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import Header from "./header";
-import Footer from "./footer";
+import Footer from "./Footer";
 import styled from "styled-components";
 import "./layout.scss";
 import favicon from "../../img/favicon.png";

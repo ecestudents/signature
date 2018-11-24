@@ -11,17 +11,6 @@ const Gradient = (color = "#e55625") => {
   end.hue += 1;
   end.saturation *= 1.01;
 
-  //console.log(start);
-
-  /*
-  normal H:15 S:79% L:52% A:1
-  start H:27 S:100% L:54% A:1
-  end H:16 S:78% L:52% A:1
-   
-  */
-
-  console.log(start);
-
   return `
   background-color: ${color};
   background: linear-gradient(
