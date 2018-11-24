@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
-import styled from "styled-components";
-import { Wrapper, Gradient } from "../styles";
+import { styled, Wrapper, Gradient } from "styles";
 
 const Container = styled.div`
-  color: white;
   ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
 `;
 

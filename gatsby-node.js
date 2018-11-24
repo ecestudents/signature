@@ -61,22 +61,38 @@ const { createFilePath } = require('gatsby-source-filesystem')
 // }
 
 
-if (process.env.C9_PID) exports.onCreateWebpackConfig = ({ stage, getConfig, actions }) => {
-  const PrettierPlugin = require("prettier-webpack-plugin");
-  //console.log("stage: ", stage)
-  let config = getConfig()
-  //console.log(config)
+exports.onCreateWebpackConfig = ({ stage, getConfig, actions }) => {
+let config = getConfig()
+
   if (stage == "develop") {
-    config.entry.commons = config.entry.commons.map(point => {
-      if (/webpack-hot-middleware/.test(point)) {
-        point = point.replace("http://localhost:8080", "")
+    console.log(config.resolve.alias)
+    //fix easy paths
+    let aliases = {
+        src: path.resolve(__dirname, 'src'),
+        components: path.resolve(__dirname, 'src/components'),
+        //layouts: path.resolve(__dirname, 'src/layouts'),
+        pages: path.resolve(__dirname, 'src/pages'),
+        styles: path.resolve(__dirname, 'src/components/styles'),
+        layout: path.resolve(__dirname, 'src/components/layout')
       }
-      return point;
-    })
-    config.plugins.push(new PrettierPlugin())
+      
+    config.resolve.alias = {...config.resolve.alias, ...aliases}
+    
+    //cloud9 development
+    if (process.env.C9_PID) {
+      const PrettierPlugin = require("prettier-webpack-plugin");
+      //console.log("stage: ", stage)
+
+      config.entry.commons = config.entry.commons.map(point => {
+        if (/webpack-hot-middleware/.test(point)) {
+          point = point.replace("http://localhost:8080", "")
+        }
+        return point;
+      })
+      config.plugins.push(new PrettierPlugin())
+      config.output.publicPath = "/"
+    }
   }
   
-  //config.resolve
-  config.output.publicPath = "/"
   actions.replaceWebpackConfig(config)
 }

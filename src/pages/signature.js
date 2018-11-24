@@ -1,14 +1,8 @@
 import React from "react";
-import Layout from "../components/layout/index";
+import Layout from "layout";
 
-import styled from "styled-components";
+import { styled, Wrapper } from "styles";
 import TextField from "@material-ui/core/TextField";
-
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-top: 3rem;
-`;
 
 const StyledForm = styled.div`
   background: white;
@@ -86,7 +80,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout gradient="#0F852D">
-        <StyledWrapper>
+        <Wrapper>
           <StyledForm>
             <div>
               <h2>Lets get you that signature</h2>
@@ -346,7 +340,7 @@ export default class IndexPage extends React.Component {
               </table>
             </div>
           </Signature>
-        </StyledWrapper>
+        </Wrapper>
       </Layout>
     );
   }

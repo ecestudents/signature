@@ -5,7 +5,7 @@ import {
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { styled, ms, media } from "../../styles";
+import { styled, ms, media } from "styles";
 
 const Content = styled.div`
   display: grid;
@@ -30,16 +30,16 @@ const Content = styled.div`
 class Social extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { facebook: "", linkedin: "540", instagram: "769" };
+    this.state = { facebook: "4377", linkedin: "540", instagram: "769" };
   }
 
-  componentDidMount() {
-    fetch(
-      "https://graph.facebook.com/ECEStudents?fields=fan_count&access_token=EAAD5RBXdTP0BAHQthvjIhZAVXiHWABiGOzqF1JYbu4UjY3eZACcTcO2VSfNn75O1M2L2lMTaGqATzhNZArZCryM4fLKG1y204DDVxfxCbuVqf3bAoAiC9E3ivvKWDwZCkK6DjZCLKHAaxoPwmtgTB6b596HMnfkDgk6R7AAvp6YCHRv8FTbuMfzP45XdvvMu6r19lMWriUegZDZD"
-    )
-      .then(res => res.json())
-      .then(res => this.setState({ facebook: res.fan_count }));
-  }
+  //   componentDidMount() {
+  //     fetch(
+  //       "https://graph.facebook.com/ECEStudents?fields=fan_count&access_token=EAAD5RBXdTP0BAHQthvjIhZAVXiHWABiGOzqF1JYbu4UjY3eZACcTcO2VSfNn75O1M2L2lMTaGqATzhNZArZCryM4fLKG1y204DDVxfxCbuVqf3bAoAiC9E3ivvKWDwZCkK6DjZCLKHAaxoPwmtgTB6b596HMnfkDgk6R7AAvp6YCHRv8FTbuMfzP45XdvvMu6r19lMWriUegZDZD"
+  //     )
+  //       .then(res => res.json())
+  //       .then(res => this.setState({ facebook: res.fan_count }));
+  //   }
 
   render() {
     return (
