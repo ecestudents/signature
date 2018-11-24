@@ -16,9 +16,13 @@ const Content = styled(Wrapper)`
 
   nav {
     text-transform: uppercase;
-    fonst-size: ${ms(2)};
-    font-weight: 300;
+    font-size: ${ms(0.25)};
+    font-weight: 400;
     font-family: MuseoSans;
+
+    a {
+      margin: 0 ${ms(-1)};
+    }
   }
 `;
 //
