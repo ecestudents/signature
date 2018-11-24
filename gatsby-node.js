@@ -65,18 +65,9 @@ exports.onCreateWebpackConfig = ({ stage, getConfig, actions }) => {
 let config = getConfig()
 
   if (stage == "develop") {
-    console.log(config.resolve.alias)
+    //console.log(config.resolve.alias)
     //fix easy paths
-    let aliases = {
-        src: path.resolve(__dirname, 'src'),
-        components: path.resolve(__dirname, 'src/components'),
-        //layouts: path.resolve(__dirname, 'src/layouts'),
-        pages: path.resolve(__dirname, 'src/pages'),
-        styles: path.resolve(__dirname, 'src/components/styles'),
-        layout: path.resolve(__dirname, 'src/components/layout')
-      }
-      
-    config.resolve.alias = {...config.resolve.alias, ...aliases}
+    
     
     //cloud9 development
     if (process.env.C9_PID) {
@@ -94,5 +85,15 @@ let config = getConfig()
     }
   }
   
+  let aliases = {
+        src: path.resolve(__dirname, 'src'),
+        components: path.resolve(__dirname, 'src/components'),
+        //layouts: path.resolve(__dirname, 'src/layouts'),
+        pages: path.resolve(__dirname, 'src/pages'),
+        styles: path.resolve(__dirname, 'src/components/styles'),
+        layout: path.resolve(__dirname, 'src/components/layout')
+      }
+      
+    config.resolve.alias = {...config.resolve.alias, ...aliases}
   actions.replaceWebpackConfig(config)
 }
