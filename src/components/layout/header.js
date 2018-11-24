@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import { ms, styled, Wrapper, Gradient, colors } from "styles";
+import { ms, styled, Wrapper, Gradient, colors, media } from "styles";
 
 const Container = styled.div`
   ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
@@ -13,6 +13,10 @@ const Content = styled(Wrapper)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${media.lessThan("medium")`.gatsby-image-wrapper {
+      width: 150px !important;}
+    `}
 
   nav {
     text-transform: uppercase;
@@ -29,7 +33,7 @@ const Content = styled(Wrapper)`
 const Header = ({ data, gradient }) => (
   <Container gradient={gradient}>
     <Content>
-      <Link to="/">
+      <Link className="logo" to="/">
         <Img fixed={data.file.childImageSharp.fixed} />
       </Link>
 

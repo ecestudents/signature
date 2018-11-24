@@ -5,7 +5,7 @@ import {
   faInstagram
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { styled, ms, media } from "styles";
+import { styled, ms } from "styles";
 
 const Content = styled.div`
   display: grid;
@@ -50,6 +50,7 @@ class Social extends React.Component {
             className="icon"
             href="https://www.facebook.com/ECEStudents"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faFacebookSquare} />
           </a>
@@ -58,6 +59,7 @@ class Social extends React.Component {
             className="icon"
             href="https://www.linkedin.com/company/ecestudents/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
@@ -66,6 +68,7 @@ class Social extends React.Component {
             className="icon"
             href="https://www.instagram.com/ecestudents/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faInstagram} />
           </a>

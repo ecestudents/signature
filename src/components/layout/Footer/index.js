@@ -42,24 +42,16 @@ const Grid = styled.div`
   }
 `;
 
-class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <Container gradient={this.props.gradient}>
-        <Wrapper>
-          <Grid>
-            <Contact />
-            <Address />
-            <Social />
-          </Grid>
-        </Wrapper>
-      </Container>
-    );
-  }
-}
+const Footer = props => (
+  <Container gradient={props.gradient}>
+    <Wrapper>
+      <Grid>
+        <Contact />
+        <Address />
+        <Social />
+      </Grid>
+    </Wrapper>
+  </Container>
+);
 
 export default Footer;

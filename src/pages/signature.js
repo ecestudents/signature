@@ -149,11 +149,11 @@ export default class IndexPage extends React.Component {
                               <a
                                 href="http://www.ecestudents.com/"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                               >
                                 <img
                                   src="https://ci6.googleusercontent.com/proxy/hzt89omOSiIKhniFoiOlBijnHATPlt9aY-GLvrmgaQ6zBlPko882AvQG6zPbeO-bcXbsbNVaYph1Wtc_RK2-FiUOZCoMoaCjC8xRypFRQb4uJ1Ix8FhCsDxlmFxiIFyHXTT2fA=s0-d-e1-ft#https://htmlsigs.s3.amazonaws.com/logos/files/000/603/940/landscape/xb2o2b.png"
-                                  alt
+                                  alt=""
                                   height={94}
                                   style={{ marginRight: 15 }}
                                 />
@@ -247,7 +247,7 @@ export default class IndexPage extends React.Component {
                                                   "mailto:" + this.state.email
                                                 }
                                                 target="_blank"
-                                                rel="noopener"
+                                                rel="noopener noreferrer"
                                               >
                                                 {this.state.email}
                                               </a>
@@ -293,7 +293,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://www.ecestudents.nl/"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   ecestudents.nl
                                                 </a>
@@ -301,7 +301,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://m.facebook.com/profile.php?id=591672020870860&ref=content_filter"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   Facebook&nbsp;
                                                 </a>
@@ -309,7 +309,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://www.instagram.com/ecestudents/"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   Instagram
                                                 </a>
@@ -317,7 +317,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://www.linkedin.com/in/odonengegard/"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   LinkedIn
                                                 </a>

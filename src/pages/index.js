@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/layout";
-import { Wrapper } from "components/styles";
+import Layout from "layout";
+import { Wrapper } from "styles";
 
 const FrontPage = () => (
   <Layout>

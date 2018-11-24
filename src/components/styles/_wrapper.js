@@ -1,12 +1,11 @@
-import React from "react";
-import { styled, media, ms } from "styles";
+import { styled, media } from "styles";
 
 const Breakpoints = styled.div`
   margin-right: auto;
   margin-left: auto;
 
 ${media.greaterThan("small")`
-    max-width: 540px;
+    max-width: 540px; //ms
 `}
 
 ${media.greaterThan("medium")`

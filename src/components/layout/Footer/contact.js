@@ -57,7 +57,11 @@ const Contact = () => (
       </div>
 
       <div className="text">
-        <a href="https://ece.nl/privacy-statement/" target="_blank">
+        <a
+          href="https://ece.nl/privacy-statement/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Privacy Statement
         </a>
       </div>
@@ -67,7 +71,11 @@ const Contact = () => (
       </div>
 
       <div className="text">
-        <a href="https://ece.nl/terms-conditions/" target="_blank">
+        <a
+          href="https://ece.nl/terms-conditions/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Terms & Conditions
         </a>
       </div>
