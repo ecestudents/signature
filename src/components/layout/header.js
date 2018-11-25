@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import { ms, styled, Wrapper, Gradient, colors, media } from "styles";
 import logo from "./logo_white.png";
 
@@ -14,9 +14,9 @@ const Content = styled(Wrapper)`
   align-items: center;
   justify-content: space-between;
 
-  ${media.lessThan("medium")`.gatsby-image-wrapper {
-      width: 150px !important;}
-    `}
+  img {
+    width: 250px;
+  }
 
   nav {
     text-transform: uppercase;
@@ -28,23 +28,37 @@ const Content = styled(Wrapper)`
       margin: 0 ${ms(-1)};
     }
   }
+
+  ${media.lessThan("medium")`
+    img{
+      width: 150px;  
+      
+    }
+    
+    nav {
+      display: none;
+    }
+    `}
 `;
 
-const Header = ({ gradient }) => (
-  <Container gradient={gradient}>
-    <Content>
-      <Link className="logo" to="/">
-        <img src={logo} />
-      </Link>
-
-      <nav>
-        <Link to="/"> Home</Link>
-        <Link to="/signature"> Signature</Link>
-        <Link to="/signature"> Signature</Link>
-        <Link to="/signature"> Signature</Link>
-      </nav>
-    </Content>
-  </Container>
-);
+class Header extends React.Component {
+  render() {
+    return (
+      <Container gradient={this.props.gradient}>
+        <Content>
+          <Link className="logo" to="/">
+            <img src={logo} alt="logo" />
+          </Link>
+          <nav>
+            <Link to="/"> Home</Link>
+            <Link to="/signature"> Signature</Link>
+            <Link to="/signature"> Signature</Link>
+            <Link to="/signature"> Signature</Link>
+          </nav>
+        </Content>
+      </Container>
+    );
+  }
+}
 
 export default Header;
