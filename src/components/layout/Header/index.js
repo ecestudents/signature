@@ -58,12 +58,17 @@ const links = [
 ];
 
 const Links = () =>
-  links.map(item => {
+  links.map((item, i) => {
     if (item.path.startsWith("/"))
-      return <Link to={item.path}> {item.label}</Link>;
+      return (
+        <Link to={item.path} key={i}>
+          {" "}
+          {item.label}
+        </Link>
+      );
     else
       return (
-        <a href={item.path} target="_blank" rel="noopener noreferrer">
+        <a key={i} href={item.path} target="_blank" rel="noopener noreferrer">
           {item.label}
         </a>
       );

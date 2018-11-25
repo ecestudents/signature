@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "layout";
-//import Typeform from "components/typeform";
+import Typeform from "components/typeform";
 import { Wrapper, styled, colors, media, ms } from "styles";
 
 const partners = [
@@ -33,12 +33,22 @@ const Content = styled(Wrapper)`
 
     h1 {
       color: ${colors.blue};
+      font-size: ${ms(0.5)};
+      
+      ${media.greaterThan("large")`
+      font-size: ${ms(2)};
+      `}
+      
     }
 
     h2,
     h3 {
       color: ${colors.orange};
       font-size: ${ms(1.5)};
+      
+          ${media.lessThan("medium")`
+            margin: ${ms(-2)} 0;
+    `}
     }
   }
 
@@ -48,7 +58,7 @@ const Content = styled(Wrapper)`
     h1 {
       color: ${colors.blue};
       font-size: ${ms(2.5)};
-    }
+    } 
 
     button {
       cursor: pointer;
@@ -122,13 +132,14 @@ const FrontPage = () => (
 
       <div className="stay-updated">
         <h1> Stay up-to-date!</h1>
+        <Typeform text="Sign Up" form="WTbHpY" />
       </div>
 
       <div className="partners">
         <h1>Our Partners & Collaborations include:</h1>
         <ul>
-          {partners.map(p => (
-            <li>
+          {partners.map((p, i) => (
+            <li key={i}>
               <img
                 src={
                   "https://res.cloudinary.com/ece/image/upload/f_auto,q_auto,w_300,c_fill/pages/front/" +

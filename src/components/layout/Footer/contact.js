@@ -6,21 +6,17 @@ import {
   faFile
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { styled, ms, media } from "../../styles";
+import { styled, ms } from "../../styles";
 
 const Content = styled.div`
   display: grid;
 
   grid-auto-flow: row;
-  grid-column-gap: ${ms(-1)};
-  grid-row-gap: ${ms(-1)};
+  grid-column-gap: ${ms(-2)};
   align-items: center;
   margin-top: 5px;
 
-  grid-template-columns: 1fr 200px;
-  ${media.greaterThan("large")`
-    grid-template-columns: 1fr auto;
-  `};
+  grid-template-columns: 1fr auto 1fr auto;
 
   .icon {
     font-size: ${ms(1)};

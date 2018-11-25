@@ -1,17 +1,14 @@
 import React from "react";
 import Layout from "layout";
 
-import { styled, Wrapper, media, ms } from "styles";
+import { styled, Wrapper, ms } from "styles";
 import TextField from "@material-ui/core/TextField";
 
 const Content = styled(Wrapper)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  ${media.lessThan("large")`
-    flex-direction: column;
-  `}
+  flex-direction: column;
 `;
 
 const StyledForm = styled.div`
@@ -20,9 +17,8 @@ const StyledForm = styled.div`
   text-align: left;
   box-shadow: 0 0 8px 0px grey;
   
-    ${media.lessThan("large")`
     margin-bottom: ${ms(3)};
-  `}
+
   
   .hidden {
     display: none;

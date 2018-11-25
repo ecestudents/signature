@@ -18,12 +18,12 @@ const Content = styled.div`
   text-align: center;
 
   .icon {
-    font-size: ${ms(2.5)};
+    font-size: ${ms(2)};
     color: white;
   }
 
   .count {
-    font-size: ${ms(1)};
+    font-size: ${ms(0.5)};
   }
 `;
 

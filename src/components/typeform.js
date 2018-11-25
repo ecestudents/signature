@@ -15,7 +15,17 @@ class Typeform extends React.Component {
   render() {
     return (
       <div>
-        <div />
+        <div>
+          <ReactTypeformEmbed
+            popup={true}
+            autoOpen={false}
+            url={"https://ecestudents2018.typeform.com/to/" + this.props.form}
+            hideHeaders={true}
+            hideFooter={true}
+            style={{ top: 100 }}
+            ref={tf => (this.typeformEmbed = tf)}
+          />
+        </div>
         <div>
           <button
             className="btn"

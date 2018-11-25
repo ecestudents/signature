@@ -65,7 +65,7 @@ exports.onCreateWebpackConfig = ({ stage, getConfig, actions }) => {
 let config = getConfig()
 
   if (stage == "develop") {
-    //console.log(config.resolve.alias)
+    //console.log(config.module.rules)
     //fix easy paths
     
     
@@ -85,6 +85,7 @@ let config = getConfig()
     }
   }
   
+
   let aliases = {
         src: path.resolve(__dirname, 'src'),
         components: path.resolve(__dirname, 'src/components'),
