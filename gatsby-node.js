@@ -85,6 +85,13 @@ let config = getConfig()
     }
   }
   
+   if (stage === 'build-html') {
+        config.module.rules.push({
+                    test: /@typeform/,
+                    loader: 'null-loader',
+                  })
+    }
+  
 
   let aliases = {
         src: path.resolve(__dirname, 'src'),
