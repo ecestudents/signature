@@ -42,9 +42,32 @@ const Content = styled(Wrapper)`
       display: none;
     }
     `}
+
+  ${media.greaterThan("medium")`
+      .burger-menu {display: none}
+    `}
 `;
 
 const links = [
+  { label: "Home", path: "/" },
+  { label: "Signature", path: "/signature" },
+  {
+    label: "Startup 24",
+    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
+  },
+
+  { label: "Home", path: "/" },
+  { label: "Signature", path: "/signature" },
+  {
+    label: "Startup 24",
+    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
+  },
+  { label: "Home", path: "/" },
+  { label: "Signature", path: "/signature" },
+  {
+    label: "Startup 24",
+    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
+  },
   { label: "Home", path: "/" },
   { label: "Signature", path: "/signature" },
   {
@@ -65,6 +88,12 @@ const Links = () =>
       );
   });
 
+// const contentStyle = {
+//   background: "rgba(255,255,255,0)",
+//   width: "80%",
+//   border: "none"
+// };
+
 class Header extends React.Component {
   render() {
     return (
@@ -76,7 +105,13 @@ class Header extends React.Component {
           <Popup
             modal
             overlayStyle={{ background: "rgba(255,255,255,0.98" }}
-            closeOnDocumentClick={false}
+            contentStyle={{
+              background: "rgba(255,255,255,0)",
+              width: "80%",
+              border: "none",
+              marginTop: ms(4)
+            }}
+            closeOnDocumentClick={true}
             trigger={open => <BurgerIcon open={open} />}
           >
             {close => (
