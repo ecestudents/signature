@@ -20,6 +20,7 @@ const partners = [
 ];
 
 const Content = styled(Wrapper)`
+
   .welcome {
     display: grid;
     grid-template-areas: "left" "right";
