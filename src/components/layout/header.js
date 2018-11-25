@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { Link, graphql } from "gatsby";
 import { ms, styled, Wrapper, Gradient, colors, media } from "styles";
+import logo from "./logo_white.png";
 
 const Container = styled.div`
   ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
@@ -29,12 +29,12 @@ const Content = styled(Wrapper)`
     }
   }
 `;
-//
-const Header = ({ data, gradient }) => (
+
+const Header = ({ gradient }) => (
   <Container gradient={gradient}>
     <Content>
       <Link className="logo" to="/">
-        <Img fixed={data.file.childImageSharp.fixed} />
+        <img src={logo} />
       </Link>
 
       <nav>
@@ -47,21 +47,4 @@ const Header = ({ data, gradient }) => (
   </Container>
 );
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query {
-        file(relativePath: { eq: "logo_white.png" }) {
-          childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
-            fixed(width: 250) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Header data={data} {...props} />}
-  />
-);
+export default Header;
