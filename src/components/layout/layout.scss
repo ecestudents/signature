@@ -1,3 +1,5 @@
+@import "../../../node_modules/normalize.css/normalize";
+
 //fonts
 @font-face {
   font-family: Aleo;
@@ -81,11 +83,21 @@
   font-style: italic;
 }
 
-body {
-  color: #303030k;
-  font-family: Aleo;
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh !important ;
+  text-align: justify;
+  font-weight: 200;
+  min-width: 400px;
 }
 
+body {
+  color: #303030;
+  //font-family: Aleo;
+  font-family: MuseoSans;
+}
 h1,
 h2,
 h3,
@@ -93,12 +105,18 @@ h4,
 h5,
 h6 {
   font-family: MuseoSans;
+  font-weight: 300;
 }
 
 a {
-  color: #4887c7;
+  color: white;
+
   text-decoration: none;
   /* no underline */
+}
+
+main a {
+  color: #4887c7;
 }
 
 ::selection {

@@ -1,13 +1,14 @@
 import React from "react";
-import Layout from "../components/layout/index";
+import Layout from "layout";
 
-import styled from "styled-components";
+import { styled, Wrapper, ms } from "styles";
 import TextField from "@material-ui/core/TextField";
 
-const StyledWrapper = styled.div`
+const Content = styled(Wrapper)`
   display: flex;
-  justify-content: space-around;
-  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const StyledForm = styled.div`
@@ -15,6 +16,9 @@ const StyledForm = styled.div`
   padding: 55px 45px;
   text-align: left;
   box-shadow: 0 0 8px 0px grey;
+  
+    margin-bottom: ${ms(3)};
+
   
   .hidden {
     display: none;
@@ -85,8 +89,8 @@ export default class IndexPage extends React.Component {
 
   render() {
     return (
-      <Layout>
-        <StyledWrapper>
+      <Layout gradient="#C8A2C8">
+        <Content>
           <StyledForm>
             <div>
               <h2>Lets get you that signature</h2>
@@ -155,11 +159,11 @@ export default class IndexPage extends React.Component {
                               <a
                                 href="http://www.ecestudents.com/"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noopener noreferrer"
                               >
                                 <img
                                   src="https://ci6.googleusercontent.com/proxy/hzt89omOSiIKhniFoiOlBijnHATPlt9aY-GLvrmgaQ6zBlPko882AvQG6zPbeO-bcXbsbNVaYph1Wtc_RK2-FiUOZCoMoaCjC8xRypFRQb4uJ1Ix8FhCsDxlmFxiIFyHXTT2fA=s0-d-e1-ft#https://htmlsigs.s3.amazonaws.com/logos/files/000/603/940/landscape/xb2o2b.png"
-                                  alt
+                                  alt=""
                                   height={94}
                                   style={{ marginRight: 15 }}
                                 />
@@ -253,7 +257,7 @@ export default class IndexPage extends React.Component {
                                                   "mailto:" + this.state.email
                                                 }
                                                 target="_blank"
-                                                rel="noopener"
+                                                rel="noopener noreferrer"
                                               >
                                                 {this.state.email}
                                               </a>
@@ -299,7 +303,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://www.ecestudents.nl/"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   ecestudents.nl
                                                 </a>
@@ -307,7 +311,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://m.facebook.com/profile.php?id=591672020870860&ref=content_filter"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   Facebook&nbsp;
                                                 </a>
@@ -315,7 +319,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://www.instagram.com/ecestudents/"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   Instagram
                                                 </a>
@@ -323,7 +327,7 @@ export default class IndexPage extends React.Component {
                                                 <a
                                                   href="https://www.linkedin.com/in/odonengegard/"
                                                   target="_blank"
-                                                  rel="noopener"
+                                                  rel="noopener noreferrer"
                                                 >
                                                   LinkedIn
                                                 </a>
@@ -346,7 +350,7 @@ export default class IndexPage extends React.Component {
               </table>
             </div>
           </Signature>
-        </StyledWrapper>
+        </Content>
       </Layout>
     );
   }

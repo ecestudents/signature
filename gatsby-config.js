@@ -1,4 +1,5 @@
 const proxy = require("http-proxy-middleware")
+const path = require("path")
 
 module.exports = {
   siteMetadata: {
@@ -40,8 +41,8 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    // 'gatsby-plugin-sharp',
+    // 'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
