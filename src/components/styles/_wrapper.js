@@ -6,17 +6,17 @@ const Breakpoints = styled.div`
     max-width: 95%;
 
 ${media.greaterThan("small")`
-    max-width: 540px; //ms
+    max-width: 80%; //ms
     padding: 0 ${ms(1)};
    
 `}
 
 ${media.greaterThan("medium")`
-    max-width: 720px;
+    max-width: 70%;
 `}
 
 ${media.greaterThan("large")`
-    max-width: 1200px;
+    max-width: 60%;
 `};
 
 `;

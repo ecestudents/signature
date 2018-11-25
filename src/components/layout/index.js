@@ -7,20 +7,18 @@ import "./layout.scss";
 import favicon from "../../img/favicon.png";
 
 const Layout = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template: auto 1fr auto / 100%;
   min-height: 100vh;
 
   ${media.greaterThan("medium")`
   `}
 
   main {
-    flex: 1;
-    margin: ${ms(1.5)} 0;
-
+    padding: ${ms(1.5)};
     ${media.lessThan("medium")`
-     margin: ${ms(0)} 0;
-     `}
+    padding: ${ms(0)};
+    `}
   }
 `;
 
