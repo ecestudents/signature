@@ -19,7 +19,7 @@ const Layout = styled.div`
     margin: ${ms(1.5)} 0;
 
     ${media.lessThan("medium")`
-     margin: 0 ${ms(0)};
+     margin: ${ms(0)} 0;
      `}
   }
 `;

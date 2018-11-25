@@ -1,14 +1,28 @@
 import React from "react";
 import Layout from "layout";
 
-import { styled, Wrapper } from "styles";
+import { styled, Wrapper, media, ms } from "styles";
 import TextField from "@material-ui/core/TextField";
+
+const Content = styled(Wrapper)`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ${media.lessThan("large")`
+    flex-direction: column;
+  `}
+`;
 
 const StyledForm = styled.div`
   background: white;
   padding: 55px 45px;
   text-align: left;
   box-shadow: 0 0 8px 0px grey;
+  
+    ${media.lessThan("large")`
+    margin-bottom: ${ms(3)};
+  `}
   
   .hidden {
     display: none;
@@ -79,8 +93,8 @@ export default class IndexPage extends React.Component {
 
   render() {
     return (
-      <Layout gradient="#0F852D">
-        <Wrapper>
+      <Layout gradient="#C8A2C8">
+        <Content>
           <StyledForm>
             <div>
               <h2>Lets get you that signature</h2>
@@ -340,7 +354,7 @@ export default class IndexPage extends React.Component {
               </table>
             </div>
           </Signature>
-        </Wrapper>
+        </Content>
       </Layout>
     );
   }

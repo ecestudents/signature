@@ -24,7 +24,7 @@ const Content = styled(Wrapper)`
   nav {
     text-transform: uppercase;
     font-size: ${ms(0.25)};
-    font-weight: 400;
+    font-weight: 300;
     font-family: MuseoSans;
 
     a {
