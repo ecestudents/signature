@@ -54,25 +54,6 @@ const links = [
   {
     label: "Startup 24",
     path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
-  },
-
-  { label: "Home", path: "/" },
-  { label: "Signature", path: "/signature" },
-  {
-    label: "Startup 24",
-    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
-  },
-  { label: "Home", path: "/" },
-  { label: "Signature", path: "/signature" },
-  {
-    label: "Startup 24",
-    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
-  },
-  { label: "Home", path: "/" },
-  { label: "Signature", path: "/signature" },
-  {
-    label: "Startup 24",
-    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
   }
 ];
 
