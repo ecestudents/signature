@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, Gradient, ms } from "styles";
+import { styled, Gradient, ms, colors } from "styles";
 import { ReactTypeformEmbed } from "react-typeform-embed";
 
 const Popup = styled.div`
@@ -16,6 +16,71 @@ const Button = styled.button`
   border-radius: 10px;
   text-transform: uppercase;
   border: 0;
+
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+
+  @-webkit-keyframes glowing {
+    0% {
+      background-color: ${colors.orange};
+      -webkit-box-shadow: 0 0 3px ${colors.orange};
+    }
+    50% {
+      background-color: #f57b0b;
+      -webkit-box-shadow: 0 0 40px #f57b0b;
+    }
+    100% {
+      background-color: ${colors.orange};
+      -webkit-box-shadow: 0 0 3px ${colors.orange};
+    }
+  }
+
+  @-moz-keyframes glowing {
+    0% {
+      background-color: ${colors.orange};
+      -moz-box-shadow: 0 0 3px ${colors.orange};
+    }
+    50% {
+      background-color: #f57b0b;
+      -moz-box-shadow: 0 0 40px #f57b0b;
+    }
+    100% {
+      background-color: ${colors.orange};
+      -moz-box-shadow: 0 0 3px ${colors.orange};
+    }
+  }
+
+  @-o-keyframes glowing {
+    0% {
+      background-color: ${colors.orange};
+      box-shadow: 0 0 3px ${colors.orange};
+    }
+    50% {
+      background-color: #f57b0b;
+      box-shadow: 0 0 40px #f57b0b;
+    }
+    100% {
+      background-color: ${colors.orange};
+      box-shadow: 0 0 3px ${colors.orange};
+    }
+  }
+
+  @keyframes glowing {
+    0% {
+      background-color: ${colors.orange};
+      box-shadow: 0 0 3px ${colors.orange};
+    }
+    50% {
+      background-color: #f57b0b;
+      box-shadow: 0 0 40px #f57b0b;
+    }
+    100% {
+      background-color: ${colors.orange};
+      box-shadow: 0 0 3px ${colors.orange};
+    }
+  }
 `;
 class Typeform extends React.Component {
   constructor(props) {
