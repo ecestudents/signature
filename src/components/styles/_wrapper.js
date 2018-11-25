@@ -12,12 +12,19 @@ ${media.greaterThan("small")`
 `}
 
 ${media.greaterThan("medium")`
-    max-width: 70%;
+    max-width: 80%;
 `}
 
 ${media.greaterThan("large")`
+    max-width: 70%;
+`};
+
+${media.greaterThan("huge")`
     max-width: 60%;
 `};
+
+
+
 
 `;
 

@@ -18,7 +18,7 @@ const Content = styled(Wrapper)`
   justify-content: space-between;
 
   img {
-    width: 250px;
+    width: 150px;
   }
 
   nav {
@@ -34,7 +34,7 @@ const Content = styled(Wrapper)`
 
   ${media.lessThan("medium")`
     img{
-      width: 150px;  
+      width: 100px;  
       
     }
     

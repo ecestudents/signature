@@ -15,6 +15,7 @@ const Layout = styled.div`
   `}
 
   main {
+    font-size: ${ms(0.5)};
     padding: ${ms(1.5)};
     ${media.lessThan("medium")`
     padding: ${ms(0)};
