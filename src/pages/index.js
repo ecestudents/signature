@@ -123,7 +123,7 @@ const FrontPage = () => (
             ready? Because we are.
           </p>
           <p>
-            <b>Júlia Lovas</b>
+            <b>Julia Lovas</b>
             <br />
             <i>President of the ECE Students Board in 2018-2019</i>
           </p>
