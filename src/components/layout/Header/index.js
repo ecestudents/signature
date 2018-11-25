@@ -93,7 +93,9 @@ class Header extends React.Component {
               marginTop: ms(4)
             }}
             closeOnDocumentClick={true}
-            trigger={open => <BurgerIcon open={open} />}
+            trigger={open => (
+              <BurgerIcon gradient={this.props.gradient} open={open} />
+            )}
           >
             {close => (
               <PopupMenu close={close}>

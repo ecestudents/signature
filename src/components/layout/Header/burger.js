@@ -1,5 +1,5 @@
 import React from "react";
-import { styled, colors, ms } from "styles";
+import { styled, ms, Gradient } from "styles";
 
 const Wrap = styled.div`
   .burger-menu {
@@ -19,7 +19,7 @@ const Wrap = styled.div`
       .bar1,
       .bar2,
       .bar3 {
-        background-color: ${colors.orange};
+        ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
         width: ${ms(3)};
       }
     }
@@ -49,8 +49,8 @@ const Wrap = styled.div`
   }
 `;
 
-export default ({ open, ...props }) => (
-  <Wrap>
+export default ({ open, gradient, ...props }) => (
+  <Wrap gradient={gradient}>
     <div className={open ? "burger-menu open" : "burger-menu"} {...props}>
       <div className="bar1" key="b1" />
       <div className="bar2" key="b2" />
