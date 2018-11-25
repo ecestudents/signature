@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import { ms, styled, Wrapper, Gradient, colors, media } from "styles";
-import logo from "./logo_white.png";
+import Popup from "reactjs-popup";
+import BurgerIcon from "./burger";
+import PopupMenu from "./popup-menu";
+import logo from "../logo_white.png";
 
 const Container = styled.div`
   ${props => (props.gradient ? Gradient(props.gradient) : Gradient())}
@@ -41,6 +44,27 @@ const Content = styled(Wrapper)`
     `}
 `;
 
+const links = [
+  { label: "Home", path: "/" },
+  { label: "Signature", path: "/signature" },
+  {
+    label: "Startup 24",
+    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
+  }
+];
+
+const Links = () =>
+  links.map(item => {
+    if (item.path.startsWith("/"))
+      return <Link to={item.path}> {item.label}</Link>;
+    else
+      return (
+        <a href={item.path} target="_blank" rel="noopener noreferrer">
+          {item.label}
+        </a>
+      );
+  });
+
 class Header extends React.Component {
   render() {
     return (
@@ -49,11 +73,20 @@ class Header extends React.Component {
           <Link className="logo" to="/">
             <img src={logo} alt="logo" />
           </Link>
+          <Popup
+            modal
+            overlayStyle={{ background: "rgba(255,255,255,0.98" }}
+            closeOnDocumentClick={false}
+            trigger={open => <BurgerIcon open={open} />}
+          >
+            {close => (
+              <PopupMenu close={close}>
+                <Links />
+              </PopupMenu>
+            )}
+          </Popup>
           <nav>
-            <Link to="/"> Home</Link>
-            <Link to="/signature"> Signature</Link>
-            <Link to="/signature"> Signature</Link>
-            <Link to="/signature"> Signature</Link>
+            <Links />
           </nav>
         </Content>
       </Container>
