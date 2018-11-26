@@ -90,7 +90,7 @@ class Header extends React.Component {
           </Link>
           <Popup
             modal
-            overlayStyle={{ background: "rgba(255,255,255,0.98" }}
+            overlayStyle={{ background: "#ffffff00" }}
             contentStyle={{
               background: "#ffffff00",
               width: "80%",
