@@ -92,7 +92,7 @@ class Header extends React.Component {
             modal
             overlayStyle={{ background: "rgba(255,255,255,0.98" }}
             contentStyle={{
-              background: "rgba(255,255,255,0)",
+              background: "#ffffff00",
               width: "80%",
               border: "none",
               marginTop: ms(4)
