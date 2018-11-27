@@ -3,7 +3,7 @@ import Layout from "layout";
 
 import SignatureTemplate from "components/pages/signature/template";
 
-import { styled, Wrapper, ms } from "styles";
+import { styled, Wrapper, ms, colors } from "styles";
 import TextField from "@material-ui/core/TextField";
 
 const Content = styled(Wrapper)`
@@ -84,7 +84,7 @@ export default class IndexPage extends React.Component {
 
   render() {
     return (
-      <Layout gradient="#C8A2C8">
+      <Layout gradient="#00305E">
         <Content>
           <StyledForm>
             <div>
