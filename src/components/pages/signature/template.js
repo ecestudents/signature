@@ -183,7 +183,9 @@ const SignatureTemplate = props => (
                                   <tr>
                                     <td>
                                       <img
-                                        src={"https://ecestudents.nl" + logo}
+                                        src={
+                                          "https://beta.ecestudents.nl" + logo
+                                        }
                                         alt=""
                                         height={94}
                                         style={{ marginRight: 15 }}
@@ -191,7 +193,9 @@ const SignatureTemplate = props => (
                                     </td>
                                     <td>
                                       <img
-                                        src={"https://ecestudents.nl" + ese}
+                                        src={
+                                          "https://beta.ecestudents.nl" + ese
+                                        }
                                         alt=""
                                         height={120}
                                         style={{ paddingTop: 15 }}
