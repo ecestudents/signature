@@ -1,10 +1,11 @@
 import React from "react";
 import ese from "./ese.png";
 import logo from "./logo.png";
-import { styled } from "styles";
+import { styled, ms } from "styles";
 const Signature = styled.div`
   box-shadow: 0 0 8px 0px grey;
   padding: 10px;
+  font-size: ${ms(-0.5)};
 `;
 
 const SignatureTemplate = props => (

@@ -92,8 +92,7 @@ export default class IndexPage extends React.Component {
       email: "",
       position: "",
       phonenumber: "",
-      copied: false,
-      html: ""
+      copied: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -103,17 +102,6 @@ export default class IndexPage extends React.Component {
     this.setState({
       [name]: event.target.value
     });
-
-    this.state.html = renderToString(
-      <SignatureTemplate
-        name={this.state.name}
-        email={this.state.email}
-        position={this.state.position}
-        phonenumber={this.state.phonenumber}
-      />
-    );
-
-    console.log(this.state.html);
   };
 
   render() {
@@ -170,7 +158,14 @@ export default class IndexPage extends React.Component {
           />
 
           <CopyToClipboard
-            text={this.state.html}
+            text={renderToString(
+              <SignatureTemplate
+                name={this.state.name}
+                email={this.state.email}
+                position={this.state.position}
+                phonenumber={this.state.phonenumber}
+              />
+            )}
             onCopy={() => this.setState({ copied: true })}
           >
             <button className="hubspot">Copy for Hubspot</button>
