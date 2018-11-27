@@ -1,16 +1,31 @@
 import React from "react";
 import Layout from "layout";
 
+import { renderToString } from "react-dom/server";
 import SignatureTemplate from "components/pages/signature/template";
 
-import { styled, Wrapper, ms, colors } from "styles";
+import { styled, Wrapper, ms, Gradient } from "styles";
 import TextField from "@material-ui/core/TextField";
+import CopyToClipboard from "react-copy-html-to-clipboard";
 
 const Content = styled(Wrapper)`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+
+  .hubspot {
+    margin: ${ms(2)};
+    ${Gradient("#00305E")}
+    cursor: pointer;
+    color: white;
+    padding: ${ms(-1)} ${ms(1.5)};
+    font-size: ${ms(0.5)};
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    border: 0;
+  }
 `;
 
 const StyledForm = styled.div`
@@ -72,7 +87,15 @@ const StyledForm = styled.div`
 export default class IndexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", position: "", phonenumber: "" };
+    this.state = {
+      name: "",
+      email: "",
+      position: "",
+      phonenumber: "",
+      copied: false,
+      html: ""
+    };
+
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -80,6 +103,17 @@ export default class IndexPage extends React.Component {
     this.setState({
       [name]: event.target.value
     });
+
+    this.state.html = renderToString(
+      <SignatureTemplate
+        name={this.state.name}
+        email={this.state.email}
+        position={this.state.position}
+        phonenumber={this.state.phonenumber}
+      />
+    );
+
+    console.log(this.state.html);
   };
 
   render() {
@@ -134,6 +168,13 @@ export default class IndexPage extends React.Component {
             position={this.state.position}
             phonenumber={this.state.phonenumber}
           />
+
+          <CopyToClipboard
+            text={this.state.html}
+            onCopy={() => this.setState({ copied: true })}
+          >
+            <button className="hubspot">Copy for Hubspot</button>
+          </CopyToClipboard>
         </Content>
       </Layout>
     );
