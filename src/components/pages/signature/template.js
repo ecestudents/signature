@@ -1,5 +1,6 @@
 import React from "react";
-import ese from "components/pages/signature/ese.png";
+import ese from "./ese.png";
+import logo from "./logo.png";
 import { styled } from "styles";
 const Signature = styled.div`
   box-shadow: 0 0 8px 0px grey;
@@ -182,7 +183,7 @@ const SignatureTemplate = props => (
                                   <tr>
                                     <td>
                                       <img
-                                        src="https://ci6.googleusercontent.com/proxy/hzt89omOSiIKhniFoiOlBijnHATPlt9aY-GLvrmgaQ6zBlPko882AvQG6zPbeO-bcXbsbNVaYph1Wtc_RK2-FiUOZCoMoaCjC8xRypFRQb4uJ1Ix8FhCsDxlmFxiIFyHXTT2fA=s0-d-e1-ft#https://htmlsigs.s3.amazonaws.com/logos/files/000/603/940/landscape/xb2o2b.png"
+                                        src={"https://ecestudents.nl" + logo}
                                         alt=""
                                         height={94}
                                         style={{ marginRight: 15 }}
@@ -190,7 +191,7 @@ const SignatureTemplate = props => (
                                     </td>
                                     <td>
                                       <img
-                                        src={ese}
+                                        src={"https://ecestudents.nl" + ese}
                                         alt=""
                                         height={120}
                                         style={{ paddingTop: 15 }}
