@@ -1,7 +1,7 @@
 import React from "react";
 import ese from "./ese.png";
 import logo from "./logo.png";
-import { styled, ms } from "styles";
+import { styled, ms, colors } from "styles";
 const Signature = styled.div`
   box-shadow: 0 0 8px 0px grey;
   padding: 10px;
@@ -10,8 +10,7 @@ const Signature = styled.div`
 
 const SignatureTemplate = props => (
   <Signature>
-    {" "}
-    <div>
+    <div style={{ fontFamily: "MuseoSans,Helvetica,Arial,sans-serif" }}>
       <table border={0} cellSpacing={0} cellPadding={0}>
         <tbody>
           <tr>
@@ -64,7 +63,8 @@ const SignatureTemplate = props => (
                                                   color: "#000000"
                                                 }}
                                               >
-                                                {props.phonenumber}
+                                                {" "}
+                                                {props.phonenumber}{" "}
                                               </span>
                                             </td>
                                             <td>
@@ -107,6 +107,7 @@ const SignatureTemplate = props => (
                                         href={"mailto:" + props.email}
                                         target="_blank"
                                         rel="noopener noreferrer"
+                                        style={{ color: colors.blue }}
                                       >
                                         {props.email}
                                       </a>
@@ -143,6 +144,7 @@ const SignatureTemplate = props => (
                                           href="https://www.ecestudents.nl/"
                                           target="_blank"
                                           rel="noopener noreferrer"
+                                          style={{ color: colors.blue }}
                                         >
                                           ecestudents.nl
                                         </a>
@@ -151,6 +153,7 @@ const SignatureTemplate = props => (
                                           href="https://www.facebook.com/ECEStudents"
                                           target="_blank"
                                           rel="noopener noreferrer"
+                                          style={{ color: colors.blue }}
                                         >
                                           Facebook&nbsp;
                                         </a>
@@ -159,6 +162,7 @@ const SignatureTemplate = props => (
                                           href="https://www.instagram.com/ecestudents/"
                                           target="_blank"
                                           rel="noopener noreferrer"
+                                          style={{ color: colors.blue }}
                                         >
                                           Instagram
                                         </a>
@@ -167,6 +171,7 @@ const SignatureTemplate = props => (
                                           href="https://www.linkedin.com/company/ecestudents/"
                                           target="_blank"
                                           rel="noopener noreferrer"
+                                          style={{ color: colors.blue }}
                                         >
                                           LinkedIn
                                         </a>
