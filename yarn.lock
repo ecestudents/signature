@@ -4127,6 +4127,13 @@ copy-descriptor@^0.1.0:
   resolved "https://registry.yarnpkg.com/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
+copy-html-to-clipboard@^4:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/copy-html-to-clipboard/-/copy-html-to-clipboard-4.0.1.tgz#6eed95ad56fe0689f47772e65b75443834319786"
+  integrity sha1-bu2VrVb+Bon0d3LmW3VEODQxl4Y=
+  dependencies:
+    toggle-selection "^1.0.3"
+
 copyfiles@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/copyfiles/-/copyfiles-1.2.0.tgz#a8da3ac41aa2220ae29bd3c58b6984294f2c593c"
@@ -6799,6 +6806,11 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
+
+foundation-emails@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/foundation-emails/-/foundation-emails-2.2.1.tgz#1f3442762395d063d5a62d790740b2433aab1747"
+  integrity sha1-HzRCdiOV0GPVpi15B0CyQzqrF0c=
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -13735,6 +13747,14 @@ react-autowhatever@^10.1.2:
     react-themeable "^1.1.0"
     section-iterator "^2.0.0"
 
+react-copy-html-to-clipboard@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/react-copy-html-to-clipboard/-/react-copy-html-to-clipboard-6.0.4.tgz#6ad02a675a7138e8357d879347c4615a369ed18d"
+  integrity sha1-atAqZ1pxOOg1fYeTR8RhWjae0Y0=
+  dependencies:
+    copy-html-to-clipboard "^4"
+    prop-types "^15.5.8"
+
 react-datetime@^2.11.0:
   version "2.16.2"
   resolved "https://registry.yarnpkg.com/react-datetime/-/react-datetime-2.16.2.tgz#d5d41fe3f6f3fa8fa1b068f2fae75cec25e1bb39"
@@ -16583,6 +16603,11 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+toggle-selection@^1.0.3:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/toggle-selection/-/toggle-selection-1.0.6.tgz#6e45b1263f2017fa0acc7d89d78b15b8bf77da32"
+  integrity sha1-bkWxJj8gF/oKzH2J14sVuL932jI=
 
 toidentifier@1.0.0:
   version "1.0.0"
