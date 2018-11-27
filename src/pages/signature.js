@@ -3,6 +3,7 @@ import Layout from "layout";
 
 import { styled, Wrapper, ms } from "styles";
 import TextField from "@material-ui/core/TextField";
+import signature from "components/pages/signature/ese.png";
 
 const Content = styled(Wrapper)`
   display: flex;
@@ -309,7 +310,7 @@ export default class IndexPage extends React.Component {
                                                 </a>
                                                 <br />
                                                 <a
-                                                  href="https://m.facebook.com/profile.php?id=591672020870860&ref=content_filter"
+                                                  href="https://www.facebook.com/ECEStudents"
                                                   target="_blank"
                                                   rel="noopener noreferrer"
                                                 >
@@ -325,7 +326,7 @@ export default class IndexPage extends React.Component {
                                                 </a>
                                                 &nbsp;|&nbsp;
                                                 <a
-                                                  href="https://www.linkedin.com/in/odonengegard/"
+                                                  href="https://www.linkedin.com/company/ecestudents/"
                                                   target="_blank"
                                                   rel="noopener noreferrer"
                                                 >
