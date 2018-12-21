@@ -36,7 +36,7 @@ const Address = () => (
       <div className="text">
         Burgemeester Oudlaan 50
         <br />
-        Office H7-27
+        Office NT-06
         <br />
         3062 PA | Rotterdam
       </div>
