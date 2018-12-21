@@ -40,7 +40,7 @@ const Contact = () => (
         <FontAwesomeIcon icon={faMobileAlt} />
       </div>
 
-      <div className="text">010 - 409 13 04</div>
+      <div className="text">010 - 408 13 04</div>
 
       <div className="icon">
         <FontAwesomeIcon icon={faEnvelope} />
