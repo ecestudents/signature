@@ -110,7 +110,7 @@ export default class IndexPage extends React.Component {
         <Content>
           <StyledForm>
             <div>
-              <h2>Lets get you that signature</h2>
+              <h2>Let's get you that signature</h2>
             </div>
             <form onSubmit={this.handleSubmit}>
               <TextField

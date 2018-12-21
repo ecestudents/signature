@@ -124,7 +124,7 @@ const SignatureTemplate = props => (
                                   <tr>
                                     <td>
                                       <br />
-                                      Room H7-29, <br />
+                                      Room NT-06, <br />
                                       Burgemeester Oudlaan 50, 3062 PA
                                       Rotterdam&nbsp;
                                     </td>
