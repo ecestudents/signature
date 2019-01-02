@@ -23,8 +23,8 @@ collections:
     label: "Pages"
     files:
       - file: "src/pages/about/index.md"
-        label: "The Story"
-        name: "about"
+        label: "Frontpage"
+        name: "frontpage"
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about-page"}
           - {label: "Title", name: "title", widget: "string"}
