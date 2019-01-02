@@ -50,10 +50,10 @@ const Content = styled(Wrapper)`
 
 const links = [
   { label: "Home", path: "/" },
-  { label: "Signature", path: "/signature" },
+  { label: "events", path: "/events" },
   {
-    label: "Startup 24",
-    path: "https://startup24.gribb.io/event/startup-24-rotterdam-1"
+    label: "RockBoost",
+    path: "https://ecestudents.typeform.com/to/FKKvwX"
   }
 ];
 
@@ -73,12 +73,6 @@ const Links = () =>
         </a>
       );
   });
-
-// const contentStyle = {
-//   background: "rgba(255,255,255,0)",
-//   width: "80%",
-//   border: "none"
-// };
 
 class Header extends React.Component {
   render() {
