@@ -8,7 +8,7 @@ const EventsPage = () => (
   <Layout>
     <Content>
       <h1>EVENTS PAGE</h1>
-      <p>Overzicht of evenementen</p>
+      <p>Overzicht of evenementen lala</p>
     </Content>
   </Layout>
 );
