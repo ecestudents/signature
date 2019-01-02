@@ -8,7 +8,7 @@ const EventsPage = () => (
   <Layout>
     <Content>
       <h1>EVENTS PAGE</h1>
-      <p>Sorry we cannot find the page you are looking for.</p>
+      <p>Overzicht van evenementen</p>
     </Content>
   </Layout>
 );
