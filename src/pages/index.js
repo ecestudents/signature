@@ -16,7 +16,7 @@ const Content = styled(Wrapper)`
 
   .hubspot {
     margin: ${ms(2)};
-    ${Gradient("#00305E")}
+    ${Gradient()}
     cursor: pointer;
     color: white;
     padding: ${ms(-1)} ${ms(1.5)};
