@@ -79,32 +79,6 @@ class Header extends React.Component {
     return (
       <Container gradient={this.props.gradient}>
         <Content>
-          <Link className="logo" to="/">
-            <img src={logo} alt="logo" />
-          </Link>
-          <Popup
-            modal
-            overlayStyle={{ background: "#ffffff" }}
-            contentStyle={{
-              background: "#ffffff",
-              width: "80%",
-              border: "none",
-              marginTop: ms(4)
-            }}
-            closeOnDocumentClick={true}
-            trigger={open => (
-              <BurgerIcon gradient={this.props.gradient} open={open} />
-            )}
-          >
-            {close => (
-              <PopupMenu close={close}>
-                <Links />
-              </PopupMenu>
-            )}
-          </Popup>
-          <nav>
-            <Links />
-          </nav>
         </Content>
       </Container>
     );
