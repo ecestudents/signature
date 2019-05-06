@@ -106,7 +106,7 @@ export default class IndexPage extends React.Component {
 
   render() {
     return (
-      <Layout gradient="#00305E">
+      <Layout>
         <Content>
           <StyledForm>
             <div>
