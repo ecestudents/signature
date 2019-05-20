@@ -193,7 +193,7 @@ export default class IndexPage extends React.Component {
               <i>
                 {" "}
                 Click the button below. Go to hubspot, select profile &
-                preferences, and go to "Edit signature". Past here.{" "}
+                preferences, go to "Edit signature", and paste there.{" "}
               </i>
               <br />
               <div>
