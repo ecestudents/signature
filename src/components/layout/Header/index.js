@@ -79,8 +79,8 @@ class Header extends React.Component {
     return (
       <Container gradient={this.props.gradient}>
         <Content>
-                <Link className="logo" to="/">	
-            <img src={logo} alt="logo" />	
+          <Link className="logo" to="/">
+            <img src={logo} alt="logo" />
           </Link>
         </Content>
       </Container>

@@ -61,10 +61,8 @@
     "start": "npm run dev",
     "clean": "rimraf .cache public lambda-public",
     "build:gatsby": "node_modules/.bin/gatsby build",
-    "build:lambda": "node_modules/.bin/netlify-lambda -c ./webpack.functions.js build src/lambda",
     "build": "npm run clean && npm run build:gatsby",
     "gatsby": "node_modules/.bin/gatsby develop --port 8080",
-    "lambda": "node_modules/.bin/netlify-lambda -c ./webpack.functions.js serve src/lambda --port 8081",
     "dev": "npm run gatsby",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"

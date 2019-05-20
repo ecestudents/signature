@@ -1,5 +1,5 @@
 import React from "react";
-import ese from "./ese.png";
+import recognized from "./recognized.png";
 import logo from "./logo.png";
 import { styled, ms, colors } from "styles";
 const Signature = styled.div`
@@ -189,22 +189,21 @@ const SignatureTemplate = props => (
                                   <tr>
                                     <td>
                                       <img
-                                        src={
-                                          "https://beta.ecestudents.nl" + logo
-                                        }
+                                        src={logo}
                                         alt=""
-                                        height={94}
-                                        style={{ marginRight: 15 }}
+                                        width={100}
+                                        style={{
+                                          marginTop: 15,
+                                          marginRight: 15
+                                        }}
                                       />
                                     </td>
                                     <td>
                                       <img
-                                        src={
-                                          "https://beta.ecestudents.nl" + ese
-                                        }
+                                        src={recognized}
                                         alt=""
-                                        height={120}
-                                        style={{ paddingTop: 15 }}
+                                        width={100}
+                                        style={{ marginTop: 15 }}
                                       />
                                     </td>
                                   </tr>
