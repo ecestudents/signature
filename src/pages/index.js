@@ -84,6 +84,14 @@ const StyledForm = styled.div`
 }  
 `;
 
+const StyledInfo = styled.div`
+  max-width: 600px;
+
+  > div {
+    text-align: center;
+  }
+`;
+
 export default class IndexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -168,7 +176,30 @@ export default class IndexPage extends React.Component {
             )}
             onCopy={() => this.setState({ copied: true })}
           >
-            <button className="hubspot">Copy for Hubspot</button>
+            <StyledInfo>
+              <br />
+              <br />
+              <b>For Gmail:</b>
+              <br />
+              <i>
+                {" "}
+                Drag your mouse across the signature and copy it. In Gmail go to
+                Setting -> General, scroll down to account and copy it.{" "}
+              </i>
+              <br />
+              <br />
+              <b>For Hubspot:</b>
+              <br />
+              <i>
+                {" "}
+                Click the button below. Go to hubspot, select profile &
+                preferences, and go to "Edit signature". Past here.{" "}
+              </i>
+              <br />
+              <div>
+                <button className="hubspot">Copy for Hubspot</button>
+              </div>
+            </StyledInfo>
           </CopyToClipboard>
         </Content>
       </Layout>
