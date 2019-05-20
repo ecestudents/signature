@@ -30,6 +30,7 @@
     "gatsby-transformer-sharp": "^2.1.1",
     "lodash": "^4.17.11",
     "lodash-webpack-plugin": "^0.11.5",
+    "lodash.assign": "^4.2.0",
     "mock-fs": "^4.7.0",
     "modular-scale": "^5.1.0",
     "netlify-cms": "2.1.2",
